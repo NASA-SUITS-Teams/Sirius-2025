@@ -1,0 +1,21 @@
+{
+	"pr_telemetry":	{
+		"ac_heating":	false,
+		"ac_cooling":	false,
+		"lights_on":	false,
+		"brakes":	false,
+		"in_sunlight":	false,
+		"throttle":	78.5,
+		"steering":	0,
+		"current_pos_x":	0,
+		"current_pos_y":	0,
+		"current_pos_alt":	0,
+		"heading":	0,
+		"pitch":	0,
+		"roll":	0,
+		"distance_traveled":	0,
+		"speed":	0,
+		"surface_incline":	0,
+		"lidar":	[]
+	}
+}

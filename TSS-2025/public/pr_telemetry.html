@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CAPCOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/masterCSS.css">
+    <link rel="stylesheet" href="./css/pr_telemetry.css">
+    <link rel="icon" href="./images/android-chrome-512x512.png">
+    <script src="./javascript/pr_telemetry.js" ></script>
+    <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+  </head>
+
+  <body onload="onload()">
+
+
+    <!------------------------------------------ Navigation Bar Section ------------------------------------------>
+    <nav>
+        <img class="logo" src="./images/android-chrome-512x512.png">
+        <span class="navBarTitle">
+            NASA S.U.I.T.S.
+        </span>
+        <span class="navBarSubTitle">
+            | CAPCOM |
+        </span>
+        <div class="navBarListContainer">
+            <ul class="navBarList">
+                <li>
+                    <a href="index.html" class="navBarListItem">Rooms</a>
+                </li>
+                <li>
+                    <a href="uia.html" class="navBarListItem">UIA</a>
+                </li>
+                <li>
+                    <a href="dcu.html" class="navBarListItem">DCU</a>
+                </li>
+                <li>
+                    <a href="rover.html" class="navBarListItem">Rover</a>
+                </li>
+                <li>
+                    <a href="spec.html" class="navBarListItem">Spec</a>
+                </li>
+                <li>
+                    <a href="telemetry.html" class="navBarListItem">Telemetry</a>
+                </li>
+                <li>
+                    <a href="pr_telemetry.html" class="navBarListItem">PR Telemetry</a>
+                </li>
+            </ul>
+        </div>
+        <img class="logo" src="./images/android-chrome-512x512.png">
+    </nav>
+
+
+    <!------------------------------------------ Main Page Body Section ------------------------------------------>
+    <div class="pageBody">
+
+        <!------------------------------------------ List of Rooms Section ------------------------------------------>
+        <div class="roomListContainer">
+            <span class="roomListTitle">
+                Rooms
+            </span>
+            <div onclick="roomSelect(1)" id="room1" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room1Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room1Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 1
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(2)" id="room2" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room2Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room2Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 2
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(3)" id="room3" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room3Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room3Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 3
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(4)" id="room4" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room4Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room4Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 4
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(5)" id="room5" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room5Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room5Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 5
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(6)" id="room6" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room6Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room6Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 6
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(7)" id="room7" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room7Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room7Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 7
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(8)" id="room8" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room8Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room8Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                       Room 8
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(9)" id="room9" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room9Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room9Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 9
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(10)" id="room10" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room10Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room10Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 10
+                    </span>
+                </div>
+            </div>
+            <div onclick="roomSelect(11)" id="room11" class="roomListItemBody">
+                <div class="roomListLightContainer">
+                    <div id="room11Light" class="roomListLight"></div>
+                </div>
+                <div class="roomListTeamNameContainer">
+                    <span id="room11Name" class="roomListTeamNameRoomNum">
+                        ------
+                    </span>
+                </div>
+                <div class="roomListRoomNumContainer">
+                    <span class="roomListTeamNameRoomNum">
+                        Room 11
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------ Room Specific Data Section ------------------------------------------>
+        <div class="roomDataContainer">
+            <div class="roomDataColumnContainer">
+                <div class="roomDataTitleContainer">
+                    <span id="roomDataTitle" class="roomDataTitle">
+                        
+                    </span>
+                </div>
+                <div class="roomDataRowContainer">
+        
+
+                    <!------------------------------------------ Stations Section ------------------------------------------>
+                    <div class="roomDataColumn">        
+        
+
+                        <!------------------------------------------ UIA State Section ------------------------------------------>
+                        <div class="roomDataSubContainer">
+                            <div class="roomDataTitleContainer">
+                                <span class="roomDataTitle">
+                                    Pressurized Rover State
+                                </span>
+                            </div>
+                            <div class="roomDataSubTitleContainer">
+                                <span class="roomDataSubTitle">
+                                    
+                                </span>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="acHeatingSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="acHeatingSwitch" name="pr_ac_heating" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_ac_heating" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            AC Heating
+                                        </span>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="acCoolingSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="acCoolingSwitch" name="pr_ac_cooling" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_ac_cooling" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            AC Cooling
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="co2ScrubberSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="co2ScrubberSwitch" name="pr_co2_scrubber" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_co2_scrubber" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            CO2 Scrubber
+                                        </span>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="lightsOnSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="lightsOnSwitch" name="pr_lights_on" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_lights_on" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Lights on
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="brakesSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="brakesSwitch" name="pr_brakes" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_brakes" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Brakes
+                                        </span>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="internalLightsSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="internalLightsSwitch" name="pr_internal_lights_on" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_internal_lights_on" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Internal lights on
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="fanPriSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="fanPriSwitch" name="pr_fan_pri" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_fan_pri" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Fan: primary
+                                        </span>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="dustWiperSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="dustWiperSwitch" name="pr_dust_wiper" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_dust_wiper" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Dust wiper
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="inSunlightSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="inSunlightSwitch" name="pr_in_sunlight" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_in_sunlight" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            In sunlight
+                                        </span>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="inSunlightSensor" class="uiaStateSensor" hidden>
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post" hidden>
+                                            <label class="switch">
+                                                <input type="checkbox" id="inSunlightSwitch" name="pr_in_sunlight" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_in_sunlight" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData" hidden>
+                                            In sunlight
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="prData" style="color: gray;">
+                                    Telemtry values
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Throttle
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="throttle" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Steering
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="steering" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Current Pos X
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="current_pos_x" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Current Pos Y
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="current_pos_y" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Current Pos Altitude
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="current_pos_alt" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Solar panel dust accumulation
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="solar_panel_dust_accum" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Heading
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="heading" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Pitch
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="pitch" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Roll
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="roll" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Distance traveled
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="distance_traveled" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Speed
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="speed" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Surface incline
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="surface_incline" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Oxygen levels
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="oxygen_levels" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Oxygen tank
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="oxygen_tank" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Battery level
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="battery_level" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Oxygen pressure
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="oxygen_pressure" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            AC fan: primary
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="ac_fan_pri" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            AC fan: secondary
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="ac_fan_sec" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Cabin pressure
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="cabin_pressure" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Cabin temperature
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="cabin_temperature" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Power consumption rate
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="power_consumption_rate" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Solar panel efficiency
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="solar_panel_efficiency" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            External temp
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="external_temp" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Coolant level
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="pr_coolant_level" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Coolant pressure
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="pr_coolant_pressure" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Coolant tank
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="pr_coolant_tank" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Motor power consumption
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="motor_power_consumption" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Terrain condition
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="terrain_condition" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Mission elapsed time
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="mission_elapsed_time" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Mission planned time
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="mission_planned_time" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Point of no return
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="point_of_no_return" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Distance from base
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="distance_from_base" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="prData" style="color: gray;">
+                                    Destination Coordinates
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <!--
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Switch destination
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <form action="" method="post">
+                                            <input type="submit" id="switch_dest_button" value="" onChange="this.form.submit()" class="prButton"/>
+                                            <input type="hidden" name="pr_switch_dest" value="true" />
+                                        </form>
+                                    </div>
+                                    -->
+                                    <div class="uiaStateSensorContainer">
+                                        <div id="switchDestSensor" class="uiaStateSensor">
+                                        </div>
+                                    </div>
+                                    <div class="uiaStateSensorContainer">
+                                        <form action="" method="post">
+                                            <label class="switch">
+                                                <input type="checkbox" id="switchDestSwitch" name="pr_switch_dest" value="true" onChange="this.form.submit()">
+                                                <span class="slider round"></span>
+                                                <input type='hidden' name="pr_switch_dest" value="false">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Switch destination
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Destination X
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="dest_x" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roomDataMainBodyContainer">
+                                <div class="roomDataMainBodySubContainer">
+                                    <div class="prNameContainer">
+                                        <span class="prData"> 
+                                            Destination Y
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="dest_y" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                    <div class="prNameContainer">
+                                        <span class="prData">
+                                            Destination Z
+                                        </span>
+                                    </div>
+                                    <div class="prDataContainer">
+                                        <span id="dest_z" class="prData">
+                                            ------
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>

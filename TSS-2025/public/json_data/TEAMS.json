@@ -1,0 +1,17 @@
+
+{
+	"teams": {
+		"team_1":   "Team 01",
+		"team_2":   "Team 02",
+		"team_3":   "Team 03",
+		"team_4":   "Team 04",
+		"team_5":   "Team 05",
+		"team_6":   "Team 06",
+		"team_7":   "Team 07",
+		"team_8":   "Team 08",
+		"team_9":	"Team 09",
+		"team_10":	"Team 10",
+		"team_11":	"Team 11",
+		"team_num": 11
+	}
+}
