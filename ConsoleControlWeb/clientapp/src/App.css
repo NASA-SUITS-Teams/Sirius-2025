@@ -1,0 +1,120 @@
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.telemetry-section, .control-section, .manual-controls, .autonomous-controls {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.telemetry-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #e9eff7;
+}
+
+.mode-select {
+  display: flex;
+  gap: 20px;
+}
+
+.control-group {
+  margin: 10px 0;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.destination-inputs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.destination-inputs label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.destination-inputs input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auto-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.auto-buttons button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+}
+
+.auto-buttons button:hover {
+  background-color: #218838;
+}
+
+.joystick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.joystick-button {
+  font-size: 1.5em;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.joystick-button:active {
+  background-color: #0056b3;
+}
+
+.horizontal-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
